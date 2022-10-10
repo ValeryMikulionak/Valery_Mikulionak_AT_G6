@@ -9,7 +9,7 @@ public class TrainMethodslfRunner {
         System.out.println("метод returnNewChar вернул " + sravn.returnNewChar('\u0067'));
         System.out.println("метод returnNewFloat вернул " + sravn.returnNewFloat(0.67F));
         System.out.println("метод returnNewDouble вернул " + sravn.returnNewDouble(500));
-        sravn.returnNewBoolean(true);
+        sravn.returnNewBoolean(false);
     }
 
 }
