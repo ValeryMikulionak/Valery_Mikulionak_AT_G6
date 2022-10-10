@@ -43,7 +43,7 @@ public class TrainMethodslf {
     }
 
     public void returnNewBoolean(boolean testboolean) {
-        if (testboolean = true) {
+        if (testboolean == true) {
             System.out.println("Я получил на вход значение истины");
         } else
             System.out.println("Я получил на вход ложь");
