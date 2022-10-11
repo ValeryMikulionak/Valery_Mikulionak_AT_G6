@@ -1,6 +1,6 @@
 package main.java.homework.day2.cycletask;
 
-public class chisla {
+public class Whiletask {
 
     public void returnNewWhile() {
 

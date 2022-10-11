@@ -1,6 +1,6 @@
 package main.java.homework.day2.cycletask;
 
-public class nechet {
+public class Fortask {
 
     public void returnNewFor() {
 

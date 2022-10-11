@@ -1,17 +1,23 @@
 package main.java.homework.day2.cycletask;
 
+import homework.day2.cycletask.Massivnaoborot;
+
 public class CycleTaskRunner {
 
     public static void main(String[] args) {
-        chisla viv = new chisla();
-        nechet nech = new nechet();
-        mas mass = new mas();
+        Whiletask vivodchisel = new Whiletask();
+        Fortask nechet = new Fortask();
+        Massivrandom massiv = new Massivrandom();
+        int[] myMassiv = massiv.returnNewMassiv();
+        Massivnaoborot naob = new Massivnaoborot();
 
-        viv.returnNewWhile();
+        vivodchisel.returnNewWhile();
         System.out.println();
         System.out.println();
-        nech.returnNewFor();
+        nechet.returnNewFor();
         System.out.println();
-        mass.returnNewMassiv();
+        massiv.returnNewMassiv();
+        System.out.println();
+        naob.massivNaoborot(myMassiv);
     }
 }
