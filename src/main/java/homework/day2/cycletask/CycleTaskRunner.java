@@ -13,6 +13,9 @@ public class CycleTaskRunner {
         MassivNaoborot naoborot = new MassivNaoborot();
         MassivFive five = new MassivFive();
         MassivKvadrat kvadrat = new MassivKvadrat();
+        MinElement element = new MinElement();
+        MassivZamena zamena = new MassivZamena();
+        MassivSort sort = new MassivSort();
 
         vivodchisel.returnNewWhile();
         System.out.println();
@@ -26,5 +29,11 @@ public class CycleTaskRunner {
         five.massivFive(myMassiv);
         System.out.println();
         kvadrat.massivKvadrat(myMassiv);
+        System.out.println();
+        element.minElement(myMassiv);
+        System.out.println();
+        zamena.massivZamena(myMassiv);
+        System.out.println();
+        sort.massivSort(myMassiv);
     }
 }
