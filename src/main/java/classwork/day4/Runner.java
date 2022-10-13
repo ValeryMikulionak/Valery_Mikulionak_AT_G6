@@ -1,4 +1,4 @@
-package main.java.classwork.day4;
+package classwork.day4;
 
 public class Runner {
 

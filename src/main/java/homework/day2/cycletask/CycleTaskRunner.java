@@ -1,4 +1,4 @@
-package main.java.homework.day2.cycletask;
+package homework.day2.cycletask;
 
 import homework.day2.cycletask.*;
 

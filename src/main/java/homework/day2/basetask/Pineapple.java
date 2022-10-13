@@ -1,4 +1,4 @@
-package main.java.homework.day2.basetask;
+package homework.day2.basetask;
 
 public class Pineapple {
 
