@@ -1,9 +1,9 @@
-package main.java.homework.day2.basetask;
+package homework.day2.basetask;
 
 public class Souce {
 
-    public String name;
-    public String color;
+    private String name;
+    private String color;
 
     public Souce() {
         name = "кетчуп";
