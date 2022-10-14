@@ -5,7 +5,7 @@ public abstract class Water {
     private String color = "no";
     private String transparency = "transparent";
     private String smell = "no";
-    private int temperature = 0;
+    private int temperature = 18;
 
     public String getColor() {
         return color;

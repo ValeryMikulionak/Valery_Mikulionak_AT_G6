@@ -12,23 +12,18 @@ public class Bottle {
         Bubble[] bubbles = new Bubble[puzir];
         water = new SparklingWater();
         ((SparklingWater) water).pump(bubbles);
+        System.out.printf("Создаю бутылку объёма %s", volume).println();
     }
 
-        //в котором бутылка заполняется массивом из пузырьков
-        // из рассчета 10000 на каждый литр
-
     public void open(){
+        System.out.printf("Открываю бутылку").println();
         ((SparklingWater)water).setOpened(true);
-        //System.out.printf("Меняю состояние воды на открытое %b", isOpened).println();
-            //меняет состояние воды в "открытое"
-            // (приблизительно, как this.water.setOpened(true);)
         }
 
     public void warm (int temperature) {
         water.setTemperature(temperature);
         System.out.printf("Устанавливаю температуру воды", temperature).println();
         }
-    //устанавливает температуру воды в бутылке
 
     public Water getWater() {
         return water;
