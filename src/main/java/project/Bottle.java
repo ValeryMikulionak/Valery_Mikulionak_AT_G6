@@ -4,12 +4,14 @@ public class Bottle {
 
     private double volume;
     private Water water;
-    private int Puzir;
+    private int puzir;
 
     public Bottle(double volume) {
-        Puzir = (int) (volume * 10000);
-        Bubble[] massiv = new Bubble[Puzir];
-        ((SparklingWater) water).pump(massiv);
+        this.volume = volume;
+        puzir = (int) (volume * 10000);
+        Bubble[] bubbles = new Bubble[puzir];
+        water = new SparklingWater();
+        ((SparklingWater) water).pump(bubbles);
     }
 
         //в котором бутылка заполняется массивом из пузырьков
@@ -17,12 +19,14 @@ public class Bottle {
 
     public void open(){
         ((SparklingWater)water).setOpened(true);
+        //System.out.printf("Меняю состояние воды на открытое %b", isOpened).println();
             //меняет состояние воды в "открытое"
             // (приблизительно, как this.water.setOpened(true);)
         }
 
     public void warm (int temperature) {
         water.setTemperature(temperature);
+        System.out.printf("Устанавливаю температуру воды", temperature).println();
         }
     //устанавливает температуру воды в бутылке
 

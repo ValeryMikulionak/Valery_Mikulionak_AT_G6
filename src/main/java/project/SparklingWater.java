@@ -2,42 +2,45 @@ package project;
 
     public class SparklingWater extends Water {
 
-        //public SparklingWater();
         private boolean isOpened;
         private Bubble[] bubbles;
-        private int partiyaPuzir = bubbles.length;
 
-        //constructor
+        public SparklingWater(){
+            isOpened();
+        }
 
         public void pump(Bubble[] bubbles) {
             this.bubbles = bubbles;
-            //сетает массив из пузырьков в воду
+        //    System.out.printf("Сетаю массив из пузырьков в воду", bubbles).println();
         }
 
         public void setOpened(boolean isOpened) {
             this.isOpened = isOpened;
-            //меняет состояние воды на "открытое"
+            System.out.printf("Меняю состояние воды на открытое %b", isOpened).println();
+            isOpened();
         }
 
         private void isOpened() {
             if (isOpened == true) {
+                System.out.printf("Проверяю состояние воды на открытость, %b", isOpened).println();
                 degas();
             }
-            //в новом потоке проверят состояние воды
-            // на "открытость" и в случае, если она открыта
-            // запускает метод degas()
         }
 
         private void degas() {
-            for (int sec = 0; partiyaPuzir >= 0; sec++) {
-                partiyaPuzir = partiyaPuzir - 10 - 5 * getTemperature();
+            int puzir = bubbles.length;
+            int partiyaPuzir = 10 + (5 * getTemperature());
+            Bubble bubble = new Bubble(null);
+            for (int sec = 0; puzir >= 0; sec++) {
+                puzir = puzir - partiyaPuzir;
+                System.out.printf("Выпускаю каждую секунду партию пузырей: ", partiyaPuzir).println();
+                bubble.cramp();
+                isSparkle();
             }
-            //каждую секунду выпускает по партии пузырьков из
-            // рассчета 10 + 5 * температура_воды
         }
 
         public boolean isSparkle() {
-            if (partiyaPuzir > 0) {
+             if (bubbles.length > 0) {
                 return true;
                 //возвращающий true если в воде еще есть пузырьки газа
             } else {
