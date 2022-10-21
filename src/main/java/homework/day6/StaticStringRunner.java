@@ -1,6 +1,6 @@
 package homework.day6;
 
-public class StringStaticRunner {
+public class StaticStringRunner {
 
     public static void main(String[] args) {
 
