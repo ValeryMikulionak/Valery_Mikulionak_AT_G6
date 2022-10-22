@@ -12,10 +12,11 @@ public class ArrayAndCow {
         int[] arrayn = new int[]{4, 8, 15, 16, 23, 42};
         arrayAndCow.arrayNaoborot(arrayn, 7);
         System.out.println();
-        arrayAndCow.cow();
         System.out.println();
         int[] arraymonth = new int[]{4, 5, 10, 130, 450, 4354, 54521};
         arrayAndCow.sumOfArrayKratMonth(arraymonth);
+        System.out.println();
+        arrayAndCow.cow();
     }
 
     public void countElementArray(int[] array, int n) {
@@ -48,7 +49,6 @@ public class ArrayAndCow {
         }
         for (int z = arrayn.length - 1; z >= 0; z--) {
             System.out.printf(arrayn[z] + " ");
-            System.out.println();
         }
 
     }
