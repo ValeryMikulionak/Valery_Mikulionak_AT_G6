@@ -26,14 +26,13 @@ public class Cars {
         }
         out.close();
 
+        List<String> carsNew = new ArrayList<>();
         for (String str : cars) {
             if (str.length() <= 4) {
-                System.out.println(str);
+                carsNew.add(str);
             }
         }
-        System.out.println();
-
-        for (String str : cars) {
+        for (String str : carsNew) {
             System.out.printf(str + " ");
         }
     }
