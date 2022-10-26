@@ -16,11 +16,11 @@ public class Countries {
         countries.add("Англия");
         countries.add("Замбия");
 
-        StringBuilder Text = new StringBuilder();
+        StringBuilder text = new StringBuilder();
         for (String str : countries) {
-            Text.append(str).append(", ");
+            text.append(str).append(", ");
         }
-        System.out.println(Text.substring(0, (Text.length() - 2)));
+        System.out.println(text.substring(0, (text.length() - 2)));
         System.out.println();
 
         int counter = 0;

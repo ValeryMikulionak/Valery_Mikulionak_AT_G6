@@ -13,12 +13,12 @@ public class Figures {
 
         List<String> figures = new ArrayList<>(Arrays.asList("Овал", "Прямоугольник", "Круг", "Квадрат", "Эллипс"));
 
-        StringBuilder Text = new StringBuilder();
+        StringBuilder text = new StringBuilder();
         for (String str : figures) {
-            Text.append(str).append("-");
+            text.append(str).append("-");
         }
         BufferedWriter out = new BufferedWriter(new FileWriter("figures.txt"));
-        out.write(Text.substring(0, (Text.length() - 1)));
+        out.write(text.substring(0, (text.length() - 1)));
         out.close();
 
         int counter = 0;
