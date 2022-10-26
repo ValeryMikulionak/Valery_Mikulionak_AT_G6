@@ -6,11 +6,11 @@ public class ReadFileRunner {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-  //      ReadFile.read();
-  //      ReadFile.write();
+        ReadFile.read();
+        ReadFile.write();
 
-        ReadWriter.write();
-        ReadWriter.read();
+      //  ReadWriter.write();
+      //  ReadWriter.read();
 
     }
 
