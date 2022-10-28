@@ -16,24 +16,18 @@ public class Noodles {
         noodles.add("Hibachi");
         noodles.add("Schezwan");
 
-        StringBuilder Text = new StringBuilder();
+        StringBuilder text = new StringBuilder();
         for (String str : noodles) {
-            Text.append(str).append("-");
+            text.append(str).append("-");
         }
-        System.out.println(Text.substring(0, (Text.length() - 1)));
-        System.out.println();
+        System.out.println(text.substring(0, (text.length() - 1)));
 
-        for (String str : noodles) {
-            String[] s = str.split("");
-            for (int i = 0; i < str.length(); i++) {
-                if (s[i].toLowerCase().matches("a")) {
-                    s[i] = "o";
-                }
-            }
-            for (int i = 0; i < noodles.size(); i++) {
-                System.out.printf(noodles.get(i) + " ");
-            }
+        for (int i = 0; i < noodles.size(); i++) {
+            noodles.set(i, noodles.get(i).replace("a", "o"));
+        }
 
+        for (int i = 0; i < noodles.size(); i++) {
+            System.out.printf(noodles.get(i) + " ");
         }
     }
 }
