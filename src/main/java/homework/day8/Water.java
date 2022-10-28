@@ -1,8 +1,5 @@
 package homework.day8;
 
-import homework.day8.basa.Bubble;
-import homework.day8.basa.Person;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
