@@ -1,8 +1,10 @@
 package project;
 
+import project.packaging.Bottle;
+
 public class Runner {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Bottle butMal = new Bottle(0.5);
         butMal.open();
