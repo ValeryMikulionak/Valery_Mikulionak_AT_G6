@@ -25,10 +25,9 @@ public class Bottle extends Vessel implements Containable{
         this();
         setVolume(volume);
         int puzir = (int) (volume * 10);
-        Bubble bubble = new Bubble("CO");
         List<Bubble> bubbles = new ArrayList<>();
         for (int i = 0; i < puzir; i++) {
-            bubbles.add(bubble);
+            bubbles.add(new Bubble("CO"));
         }
         water = new SparklingWater();
         ((SparklingWater) water).pump(bubbles);
