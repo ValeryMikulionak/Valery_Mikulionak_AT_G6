@@ -1,15 +1,17 @@
-package project;
+package project.content;
+
+import java.util.List;
 
 public class SparklingWater extends Water {
 
     private boolean isOpened;
-    private Bubble[] bubbles;
+    private List<Bubble> bubbles;
 
     public SparklingWater() {
         isOpened();
     }
 
-    public void pump(Bubble[] bubbles) {
+    public void pump(List<Bubble> bubbles) {
         this.bubbles = bubbles;
         System.out.printf("Сетаю массив из пузырьков в воду", bubbles).println();
     }
@@ -21,7 +23,7 @@ public class SparklingWater extends Water {
     }
 
     private void isOpened() {
-        if (isOpened == true) {
+        if (isOpened) {
             System.out.printf("Проверяю состояние воды на открытость - бутылка открыта %s", isOpened).println();
             degas();
         } else {
@@ -30,25 +32,26 @@ public class SparklingWater extends Water {
     }
 
     private void degas() {
-        int puzir = bubbles.length;
         int partiyaPuzir = 10 + (5 * getTemperature());
-        Bubble bubble = new Bubble(null);
-        for (int sec = 0; puzir > 0; sec++) {
-            puzir = puzir - partiyaPuzir;
-            System.out.printf("Выпускаю каждую секунду партию пузырей: ", partiyaPuzir).println();
-            bubble.cramp();
-            bubbles = new Bubble[puzir];
-            isSparkle();
+        System.out.printf("Выпускаю каждую секунду партию пузырей: %s", partiyaPuzir).println();
+        for (int i = 0; i < bubbles.size(); i++){
+            bubbles.get(i).cramp();
+            bubbles.remove(i);
+            i--;
+            if (isSparkle()) {
+                System.out.printf("В воде ещё есть пузыри %s", bubbles.size()).println();
+            } else {
+                System.out.printf("В воде больше нет пузырей").println();
+            }
         }
     }
 
     public boolean isSparkle() {
-        if (bubbles.length > 0) {
-            System.out.printf("В воде ещё есть пузыри %s", bubbles.length).println();
-            return true;
-        } else {
-            System.out.printf("В воде больше нет пузырей").println();
-            return false;
-        }
+        return !bubbles.isEmpty();
+    }
+
+    @Override
+    public void mix() {
+
     }
 }
