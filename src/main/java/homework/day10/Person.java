@@ -83,7 +83,6 @@ public class Person {
 //                .peek(x -> System.out.println(x.name + " " + x.age)).
 //                sorted(Comparator.comparing(y -> y.surname).thenComparing(y -> y.name).collect(Collectors.toList())));
 
-
 //        IntStream.rangeClosed(1, 100)
 //                .boxed().map(i -> new Person(randomLetters(), randomLetters(), (int)(15+randomNum.nextInt(16))))
 //                .collect(Collectors.toList()).forEach(System.out::println);
