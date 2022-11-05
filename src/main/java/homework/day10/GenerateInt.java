@@ -15,5 +15,4 @@ public class GenerateInt {
         System.out.println(chisla.stream().anyMatch(x -> x % 3 == 0 && x % 5 == 0));
 
     }
-
 }
