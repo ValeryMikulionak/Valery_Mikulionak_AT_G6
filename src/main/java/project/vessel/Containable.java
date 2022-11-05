@@ -1,6 +1,6 @@
-package project.packaging;
+package project.vessel;
 
-import project.Transformable;
+import project.staff.Transformable;
 
 public interface Containable {
 
@@ -21,5 +21,7 @@ public interface Containable {
 
     void close();
     //forces Containable to be closed
+    public void warm(int temperature);
+    //устанавливает температуру содержимого
 
 }

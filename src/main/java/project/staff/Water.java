@@ -1,13 +1,11 @@
-package project.content;
-
-import project.Transformable;
+package project.staff;
 
 public abstract class Water implements Transformable {
 
     private String color = "no";
     private String transparency = "transparent";
     private String smell = "no";
-    private int temperature = 18;
+    private int temperature = 0;
 
     public String getColor() {
         return color;
@@ -37,6 +35,7 @@ public abstract class Water implements Transformable {
         return temperature;
     }
 
+    @Override
     public void setTemperature(int temperature) {
         this.temperature = temperature;
     }

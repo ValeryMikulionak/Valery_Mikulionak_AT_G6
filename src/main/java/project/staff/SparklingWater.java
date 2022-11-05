@@ -1,4 +1,4 @@
-package project.content;
+package project.staff;
 
 import java.util.List;
 
@@ -52,6 +52,11 @@ public class SparklingWater extends Water {
 
     @Override
     public void mix() {
+
+    }
+
+    @Override
+    public void setOpened() {
 
     }
 }

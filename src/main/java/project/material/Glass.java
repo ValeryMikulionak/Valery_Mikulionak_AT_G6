@@ -6,6 +6,6 @@ public class Glass extends Material{
     }
 
     public Glass(){
-        super(1, "transparent", 1);
+        super(0.017, "green", 2200);
     }
 }

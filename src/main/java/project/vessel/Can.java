@@ -1,16 +1,16 @@
-package project.packaging;
+package project.vessel;
 
-import project.Transformable;
+import project.staff.Transformable;
 import project.material.Material;
-import project.material.Plastic;
+import project.material.Metal;
 
-public class Cup extends Vessel implements Containable{
-    public Cup(double volume, double diameter, int weight, Material material) {
+public class Can extends Vessel implements Containable{
+    public Can(double volume, double diameter, int weight, Material material) {
         super(volume, diameter, weight, material);
     }
 
-    public Cup() {
-        super(0.5, 1, 2, new Plastic());
+    public Can(){
+        super(0, 10, 0, new Metal());
 
     }
 
@@ -41,6 +41,11 @@ public class Cup extends Vessel implements Containable{
 
     @Override
     public void close() {
+
+    }
+
+    @Override
+    public void warm(int temperature) {
 
     }
 }
