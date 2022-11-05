@@ -1,8 +1,8 @@
-package project.content;
+package project.staff;
 
 public class Bubble {
 
-    private double volume = 0.3D;
+    public static final double volume = 0.3D;
     private String gas;
 
     public Bubble(String gas) {

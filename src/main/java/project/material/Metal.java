@@ -7,6 +7,6 @@ public class Metal extends Material{
     }
 
     public Metal() {
-        super(1, "gray", 1);
+        super(58.0, "silver", 7800);
     }
 }

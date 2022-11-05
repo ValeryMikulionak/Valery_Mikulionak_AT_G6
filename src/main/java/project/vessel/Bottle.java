@@ -1,9 +1,9 @@
-package project.packaging;
+package project.vessel;
 
-import project.Transformable;
-import project.content.Bubble;
-import project.content.SparklingWater;
-import project.content.Water;
+import project.staff.Transformable;
+import project.staff.Bubble;
+import project.staff.SparklingWater;
+import project.staff.Water;
 import project.material.Glass;
 import project.material.Material;
 
@@ -18,7 +18,7 @@ public class Bottle extends Vessel implements Containable{
     }
 
     public Bottle() {
-        super(1, 1, 1, new Glass());
+        super(0, 2, 0, new Glass());
     }
 
     public Bottle(double volume) {

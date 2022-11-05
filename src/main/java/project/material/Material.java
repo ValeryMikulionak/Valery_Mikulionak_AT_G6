@@ -2,6 +2,14 @@ package project.material;
 
 public abstract class Material {
 
+//    public enum Material {
+//
+//        Glass,
+//        Plastic,
+//        METAL;
+//
+//    }
+
     private double thermalConductivity;
     private String color;
     private double density;

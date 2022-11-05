@@ -6,7 +6,7 @@ public class Plastic extends Material{
     }
 
     public Plastic(){
-        super(1, "white", 1);
+        super(0.2, "white", 1800);
     }
 
 }

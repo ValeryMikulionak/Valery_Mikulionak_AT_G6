@@ -2,6 +2,7 @@ package homework.day8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cities {
 
@@ -13,9 +14,11 @@ public class Cities {
         cities.add("Москва");
         cities.add("Берлин");
 
-        for (String str : cities) {
-            System.out.printf(str + "\n");
-        }
+        cities.stream().peek(System.out::println).collect(Collectors.toList());
+
+//        for (String str : cities) {
+//            System.out.printf(str + "\n");
+//        }
 
         int counter = 0;
         for (String str : cities) {
@@ -23,8 +26,10 @@ public class Cities {
         }
         System.out.println(counter);
 
-        for (int i = 0; i < cities.size(); i++) {
-            System.out.printf(cities.get(i) + " ");
-        }
+        cities.stream().peek(x -> System.out.printf(x + ' ')).collect(Collectors.toList());
+
+//        for (int i = 0; i < cities.size(); i++) {
+//            System.out.printf(cities.get(i) + " ");
+//        }
     }
 }
