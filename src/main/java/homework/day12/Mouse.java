@@ -1,8 +1,10 @@
 package homework.day12;
 
+import java.util.regex.Pattern;
+
 public class Mouse {
 
-    private String pattern;
+    private String pattern = String.valueOf(Pattern.compile("Mouse <n>"));
     private String name;
 
     public Mouse(int number) {
@@ -27,7 +29,7 @@ public class Mouse {
 
     public void peep() throws InterruptedException {
 
-        System.out.println(this.name + "PEEP!");
+        System.out.println(getName() + "PEEP!");
         Thread.sleep(200);
 
     }
