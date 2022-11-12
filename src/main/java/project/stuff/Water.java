@@ -1,4 +1,4 @@
-package project.staff;
+package project.stuff;
 
 public abstract class Water implements Transformable {
 

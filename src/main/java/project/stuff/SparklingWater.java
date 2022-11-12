@@ -1,4 +1,4 @@
-package project.staff;
+package project.stuff;
 
 import java.util.List;
 
@@ -16,19 +16,23 @@ public class SparklingWater extends Water {
         System.out.printf("Сетаю массив из пузырьков в воду", bubbles).println();
     }
 
-    public void setOpened(boolean isOpened) {
-        this.isOpened = isOpened;
+    @Override
+    public void setOpened() {
+        this.isOpened = true;
         System.out.printf("Меняю состояние воды на открытое - %s", isOpened).println();
         isOpened();
     }
 
     private void isOpened() {
+        Thread t1 = new Thread(() -> {
         if (isOpened) {
             System.out.printf("Проверяю состояние воды на открытость - бутылка открыта %s", isOpened).println();
             degas();
         } else {
             System.out.printf("Проверяю состояние воды на открытость - бутылка закрыта %s", isOpened).println();
         }
+    });
+        t1.start();
     }
 
     private void degas() {
@@ -38,6 +42,11 @@ public class SparklingWater extends Water {
             bubbles.get(i).cramp();
             bubbles.remove(i);
             i--;
+            try {
+                Thread.sleep(1000 / partiyaPuzir);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             if (isSparkle()) {
                 System.out.printf("В воде ещё есть пузыри %s", bubbles.size()).println();
             } else {
@@ -50,13 +59,4 @@ public class SparklingWater extends Water {
         return !bubbles.isEmpty();
     }
 
-    @Override
-    public void mix() {
-
-    }
-
-    @Override
-    public void setOpened() {
-
-    }
 }
