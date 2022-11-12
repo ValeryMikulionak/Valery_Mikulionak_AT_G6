@@ -1,10 +1,9 @@
 package project.vessel;
 
-import project.staff.Transformable;
-import project.staff.Bubble;
-import project.staff.SparklingWater;
-import project.staff.Water;
-import project.material.Glass;
+import project.stuff.Transformable;
+import project.stuff.Bubble;
+import project.stuff.SparklingWater;
+import project.stuff.Water;
 import project.material.Material;
 
 import java.util.ArrayList;
@@ -12,26 +11,22 @@ import java.util.List;
 
 public class Bottle extends Vessel implements Containable{
     private Water water;
+    private Transformable stuff;
 
-    public Bottle(double volume, double diameter, int weight, Material material) {
-        super(volume, diameter, weight, material);
-    }
-
-    public Bottle() {
-        super(0, 2, 0, new Glass());
-    }
-
-    public Bottle(double volume) {
-        this();
-        setVolume(volume);
-        int puzir = (int) (volume * 10);
+    public Bottle(double volume, Material material) {
+        super(volume, 2.0, material);
+        int puzir = (int) (volume * 10000);
         List<Bubble> bubbles = new ArrayList<>();
         for (int i = 0; i < puzir; i++) {
             bubbles.add(new Bubble("CO"));
         }
-        water = new SparklingWater();
+        this.water = new SparklingWater();
         ((SparklingWater) water).pump(bubbles);
         System.out.printf("Создаю бутылку объёма %s", volume).println();
+    }
+
+    public Bottle(double volume) {
+        this(volume, Material.Glass);
     }
 
     @Override
@@ -56,7 +51,7 @@ public class Bottle extends Vessel implements Containable{
 
     public void open() {
         System.out.printf("Открываю бутылку").println();
-        ((SparklingWater)water).setOpened(true);
+        ((SparklingWater)water).setOpened();
         }
 
     @Override
@@ -65,7 +60,7 @@ public class Bottle extends Vessel implements Containable{
     }
 
     public void warm (int temperature) {
-        water.setTemperature(temperature);
+        stuff.setTemperature(temperature);
         System.out.printf("Устанавливаю температуру воды", temperature).println();
         }
 

@@ -1,7 +1,7 @@
 package project.warehouse;
 
 import project.material.Material;
-import project.staff.Transformable;
+import project.stuff.Transformable;
 import project.vessel.Containable;
 
 public class Factory {

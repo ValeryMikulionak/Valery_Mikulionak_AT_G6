@@ -1,6 +1,6 @@
 package project.vessel;
 
-import project.staff.Transformable;
+import project.stuff.Transformable;
 
 public interface Containable {
 

@@ -1,10 +1,6 @@
-package project.staff;
+package project.stuff;
 
 public class Sand  implements Transformable {
-
-    @Override
-    public void mix() {
-    }
 
     @Override
     public void setOpened() {

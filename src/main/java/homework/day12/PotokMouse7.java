@@ -12,7 +12,7 @@ public class PotokMouse7 {
 
         Thread t = Thread.currentThread();
 
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= 240; i++) {
             mouse.add(new Mouse(i));
         }
 
