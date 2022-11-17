@@ -13,7 +13,7 @@ public class PotokMouse4 {
 
         Thread t = Thread.currentThread();
 
-        for (int i = 1; i <= 280; i++) {
+        for (int i = 1; i <= 10; i++) {
             mouse.add(new Mouse(i));
         }
 
@@ -58,8 +58,8 @@ public class PotokMouse4 {
 
         for (int i = 0; i < mouse.size(); i++) {
             try {
-                mouse.get(i).peep();
-                mouse.remove(i);
+                mouse.get(0).peep();
+                mouse.remove(0);
                 i--;
                 Thread.sleep(300);
             } catch (InterruptedException e) {
