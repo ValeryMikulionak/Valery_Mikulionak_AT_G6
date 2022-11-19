@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 
 public class SledMes {
 
-    public static int month1 = 5;
+    public static int month1 = 8;
 
     public static void main(String[] args) {
 

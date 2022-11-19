@@ -7,9 +7,7 @@ public class PotokMouse4 {
 
     private static List<Mouse> mouse = new ArrayList<>();
 
-    public static void main(String[] args) {
-
-        Object lock = new Object();
+    public static void main(String[] args) throws InterruptedException {
 
         Thread t = Thread.currentThread();
 
@@ -17,55 +15,83 @@ public class PotokMouse4 {
             mouse.add(new Mouse(i));
         }
 
+
         Thread t1 = new Thread(() -> {
-            synchronized (lock) {
-                mouseDelete();
+            while (!mouse.isEmpty()) {
+                try {
+                    System.out.println(1);
+                    mouseDelete();
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t2 = new Thread(() -> {
-            synchronized (lock) {
-                mouseDelete();
+            while (!mouse.isEmpty()) {
+                try {
+                    System.out.println(2);
+                    mouseDelete();
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t3 = new Thread(() -> {
-            synchronized (lock) {
-                mouseDelete();
+            while (!mouse.isEmpty()) {
+                try {
+                    System.out.println(3);
+                    mouseDelete();
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t4 = new Thread(() -> {
-            synchronized (lock) {
-                mouseDelete();
+            while (!mouse.isEmpty()) {
+                try {
+                    System.out.println(4);
+                    mouseDelete();
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t5 = new Thread(() -> {
-            synchronized (lock) {
-                mouseDelete();
+            while (!mouse.isEmpty()) {
+                try {
+                    System.out.println(5);
+                    mouseDelete();
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
+
 
         t1.start();
         t2.start();
         t3.start();
         t4.start();
         t5.start();
+        Thread.sleep(3000);
+        System.out.println("КАМОООООООН");
     }
 
-    public static void mouseDelete() {
-
-        for (int i = 0; i < mouse.size(); i++) {
+    public static synchronized void mouseDelete() throws InterruptedException {
             try {
                 mouse.get(0).peep();
                 mouse.remove(0);
-                i--;
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+            } catch (IndexOutOfBoundsException e) {
             }
-        }
 
     }
 }
