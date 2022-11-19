@@ -44,21 +44,12 @@ public class Bottle extends Vessel implements Containable{
         return false;
     }
 
-    @Override
-    public int getFreeSpace() {
-        return 0;
-    }
-
     public void open() {
         System.out.printf("Открываю бутылку").println();
         ((SparklingWater)water).setOpened();
         }
 
     @Override
-    public void close() {
-
-    }
-
     public void warm (int temperature) {
         stuff.setTemperature(temperature);
         System.out.printf("Устанавливаю температуру воды", temperature).println();

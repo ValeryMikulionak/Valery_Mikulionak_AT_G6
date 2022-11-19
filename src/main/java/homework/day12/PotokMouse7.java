@@ -12,7 +12,7 @@ public class PotokMouse7 {
 
         Thread t = Thread.currentThread();
 
-        for (int i = 1; i <= 240; i++) {
+        for (int i = 1; i <= 10; i++) {
             mouse.add(new Mouse(i));
         }
 
@@ -23,7 +23,9 @@ public class PotokMouse7 {
         });
 
         Thread t2 = new Thread(() -> {
+            synchronized (lock) {
                 mouseChetDelete();
+            }
         });
 
         Thread t3 = new Thread(() -> {
@@ -33,7 +35,9 @@ public class PotokMouse7 {
         });
 
         Thread t4 = new Thread(() -> {
+            synchronized (lock) {
                 mouseChetDelete();
+            }
         });
 
         Thread t5 = new Thread(() -> {

@@ -26,18 +26,7 @@ public class Cup extends Vessel implements Containable{
     }
 
     @Override
-    public int getFreeSpace() {
-        return 0;
-    }
-
-    @Override
     public void open() {
-
-    }
-
-    @Override
-    public void close() {
-
     }
 
     @Override
