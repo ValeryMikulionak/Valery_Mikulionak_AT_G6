@@ -1,0 +1,47 @@
+1. Логотип спартак:
+//div[@class='header__logo']//a[@class]//img
+//div[@class='content_menu']//..//div[1]//img
+
+2. Информация для партнеров:
+//div[@class='content_menu']//span[text()='Информация для партнеров']
+//ul[@class='menu full']//a[@class='has_child']//..//a[@href='/partners/']//span
+
+3. Кнопка поиск:
+//div[@class='header__search']//i[@class='search fa search-btn lupa']
+//span[@class='header__eye']/parent::div/div//i
+
+4. Значок глаза:
+//span[@class='header__eye']/a/img
+//div[@class='lang-block']//img[@src='/include/eye.svg']
+
+5. Значок Ru:
+//div[@class='header__lang']//*[text()='Ru']
+//div[@class='header__lang']//a[@class='header__lang__item header__lang__item_ru active']
+
+6. Значок Ch:
+//div[@class='header__lang']//a[@class='header__lang__item header__lang__item_eng' and @href='/cn/']
+//div[@class='header__lang']//a[@class='header__lang__item header__lang__item_eng']/following-sibling::a[2]
+
+7. Скачать каталог:
+//div[@class='lang-block']/a
+//a[@target='_blank' and @class='download-catalog']
+
+8. Импрессо:
+//div[@class='content_menu']//a[@href='/products/']/following-sibling::div/div/a[contains(@href, 'Impresso')]
+//div[@class='content_menu']//a[text()='Импрессо']
+
+9. Стрелка вправо:
+//a[@class='flex-next']
+//div[@class='flexslider']/ul/li[2]/a
+
+10. Второй элемент карусели
+//ol[@class='flex-control-nav flex-control-paging']//li[contains(a,'2')]/a
+//ol[@class='flex-control-nav flex-control-paging']//li[2]/a
+
+11. VK:
+//div[@class='top_slider_wrapp']//ul[@class='social_list']/li/a/img[contains(@src,'VK')]
+//div[@class='top_slider_wrapp']//img[@src='/bitrix/templates/our_shop/images/VK.svg']
+
+12. Youtube:
+//div[@class='top_slider_wrapp']//img[@src='/bitrix/templates/our_shop/images/youtube.svg']
+//div[@class='top_slider_wrapp']//ul[@class='social_list']/li/a/img[contains(@src,'youtube')]
