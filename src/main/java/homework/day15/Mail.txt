@@ -1,0 +1,47 @@
+1. @mail:
+//div[@class='logo svelte-3hymh3 logo_noauth']/a
+//a[@href='//mail.ru' and @class='logo__img svelte-3hymh3']
+
+2. Регистрация:
+//a[@class='ph-project ph-project__register svelte-1hiqrvn']
+//div[@class='ph-auth svelte-1hiqrvn']/a
+
+3. Войти:
+//button[@class='ph-login svelte-1hiqrvn']
+//div[@class='ph-auth svelte-1hiqrvn']/button
+
+4.Найти:
+//div[@class='search-arrow__border']/button
+//button[@class='search-arrow__button']
+
+5. Mail.ru:
+//div[@class='ph-projects svelte-a9o3e5']/a[1]
+//a[@class='ph-project svelte-jq5qv5 ph-project_current']
+
+6. Облако:
+//div[@class='ph-projects svelte-a9o3e5']/a[3]
+//a[@class='ph-project svelte-jq5qv5' and contains(text(),'Облако')]
+
+7. Леди:
+//a[@class='tabs__item svelte-q15s1p' and contains(text(),'Леди')]
+//div[@class='tabs svelte-q15s1p']/a[4]
+
+8. Почта:
+//div[@class='mailbox-services svelte-giypkm']/a[1]
+//a[@class='mailbox-service svelte-giypkm'][1]
+
+9. Подробнее:
+//div[@class='weather__header svelte-xn9nd0']/a[2]
+//div[@class='weather svelte-xn9nd0']/div/a[last()]
+
+10. Вторая статья:
+//ul[@class='tabs-content svelte-1h6by3u']/li[2]//a
+//div[@class='grid__ccol svelte-3k1upp']/ul/li[2]/div/a
+
+11. Войти
+//button[@class='resplash-btn resplash-btn_primary resplash-btn_mailbox-big svelte-1y37831']
+//div[@class='logged-out-one-click svelte-giypkm']/button
+
+12. Создать почту
+//div[@class='footer svelte-9mmq1z footer_logged-out']/a
+//a[@class='resplash-btn resplash-btn_outlined-blue resplash-btn_mailbox-big svelte-1y37831']
